@@ -1,0 +1,27 @@
+<app-lay-header [drawerToggle]=drawer ></app-lay-header>
+
+<mat-drawer-container autosize class="fullHeight">
+  <mat-drawer #drawer mode="side" class="sideBar">
+    <ul>
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about">About</a>
+      </li>
+      <li>
+        <a routerLink="/login">Login</a>
+      </li>
+      <li>
+        <a routerLink="/register">Register</a>
+      </li>
+      <li>
+        <a routerLink="/forgot-password">Forgot Password</a>
+      </li>
+    </ul>
+  </mat-drawer>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

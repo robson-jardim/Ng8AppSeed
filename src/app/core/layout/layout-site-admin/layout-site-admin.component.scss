@@ -1,0 +1,18 @@
+.fullHeight {
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.sideBar {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
