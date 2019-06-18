@@ -1,3 +1,37 @@
-<p>
-  login works!
-</p>
+<div class="card">
+    <article class="card-body">
+        <a href="" class="float-right btn btn-outline-primary">Sign up</a>
+        <h4 class="card-title mb-4 mt-1">Sign in</h4>
+        <p>
+            <a href="" (click)="signInWithTwitter()" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i> &nbsp; Login via Twitter</a>
+            <a href="" (click)="signInWithFacebook()" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i> &nbsp; Login via facebook</a>
+            <a href="" (click)="signInWithGoogle()" class="btn btn-block btn-facebook"> <i class="fa fa-google fa-lg"></i> Connect Google</a>
+        </p>
+        <hr>
+        <form >
+        <div class="form-group input-icon">
+            <i class="fa fa-user"></i>
+            <input name="" class="form-control" placeholder="Email or login" type="email">
+        </div> <!-- form-group// -->
+        <div class="form-group input-icon">
+            <i class="fa fa-lock"></i> 
+            <input class="form-control" placeholder="******" type="password">
+        </div> <!-- form-group// -->                                      
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                </div> <!-- form-group// -->
+            </div>
+            <div class="col-md-6 text-right">
+                <a class="small" href="#">Forgot password?</a>
+            </div>                                            
+        </div> <!-- .row// -->                                                                  
+        </form>
+
+            <button (click)="signInAnonymously()" class="button button-info">
+                <i class="fa fa-user-secret fa-lg"></i> Connect Anonymously
+            </button>
+    </article>
+    </div> <!-- card.// -->
+    

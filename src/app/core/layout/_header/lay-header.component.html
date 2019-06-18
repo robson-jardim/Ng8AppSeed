@@ -1,6 +1,12 @@
 <mat-toolbar>
-  <button type="button" mat-button (click)="this.drawerToggleClick()">
-      <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
-  </button>
-  <span>My Application</span>
+  <div *ngIf="drawerToggle">
+      <button type="button" mat-button (click)="this.drawerToggleClick()">
+          <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
+      </button>
+  </div>
+
+  <div class="col-md-12 text-center">
+    <span>My Application</span>
+  </div>
+
 </mat-toolbar>

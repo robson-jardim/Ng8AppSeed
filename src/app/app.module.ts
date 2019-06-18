@@ -13,6 +13,14 @@ import { LayoutModule } from './core/layout/layout.module';
 import { AuthModule } from './core/auth/auth.module';
 import { StaticModule } from './core/static/static.module';
 
+// Firebase Config
+import { Firebase } from '../environments/firebase';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,7 +32,12 @@ import { StaticModule } from './core/static/static.module';
     BrowserAnimationsModule,
     LayoutModule,
     AuthModule,
-    StaticModule
+    StaticModule,
+    AngularFireModule.initializeApp(Firebase.config),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireFunctionsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

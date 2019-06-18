@@ -9,11 +9,31 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
+import { AuthGuard } from './services/auth.guard';
+import { AuthService } from './services/auth.service';
+import { NotifyService } from './services/notify.service';
+
+
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, ForgotPasswrodComponent, VerifyEmailComponent, ResetPasswordComponent, ProfileComponent],
+  declarations: [
+    LoginComponent,
+    RegisterComponent,
+    ForgotPasswrodComponent,
+    VerifyEmailComponent,
+    ResetPasswordComponent,
+    ProfileComponent
+  ],
+
   imports: [
     CommonModule,
     AuthRoutingModule
+  ],
+
+  providers: [
+    AuthService,
+    AuthGuard,
+    NotifyService
   ]
+
 })
 export class AuthModule { }
